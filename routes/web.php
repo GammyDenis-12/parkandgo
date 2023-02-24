@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\AdmController;
+use App\Http\Controllers\UserController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,11 +14,15 @@ use App\Http\Controllers\AdmController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+//user
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/user', [UserController::class,'index'])->name('user.home');
 
+
+//admin
 Route::get('/Admin/Login',[AuthController::class,'registration'])->name('login.page');
 Route::post('/Admin/Login/post',[AuthController::class,'login'])->name('admin.login');
 Route::get('/Admin/Dashboard', [AdmController::class,'admindashbd'])->name('adm.dashboard');
+
+
+
