@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg bg-white navbar-light shadow-sm px-5 py-3 py-lg-0">
     <a href="index.html" class="navbar-brand p-0">
-        <h1 class="m-0 text-primary"><i class="fa fa-car me-2"></i>ParkdGo</h1>
+        <h1 class="m-0 text-primary"><i class="fa fa-car me-2"></i>Park|Go</h1>
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
         <span class="navbar-toggler-icon"></span>
@@ -22,6 +22,6 @@
             <a href="contact.html" class="nav-item nav-link">Contact</a>
         </div>
         <button type="button" class="btn text-dark" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fa fa-search"></i></button>
-        <a href="appointment.html" class="btn btn-primary py-2 px-4 ms-3">Appointment</a>
+        <a href="appointment.html" class="btn btn-primary py-2 px-4 ms-3">Book Now</a>
     </div>
 </nav>

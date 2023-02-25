@@ -10,6 +10,7 @@ class AuthController extends Controller
     //
 
     public function registration(){
+        
         return view('auth.AdmLogin');
     }
 
@@ -26,6 +27,7 @@ class AuthController extends Controller
         } else {
 
            return redirect()->route('login.page');
+
         }
 
     }

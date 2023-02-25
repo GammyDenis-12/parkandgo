@@ -1,8 +1,5 @@
 @extends('layout/masterLayout')
 
-
-
-
 @section('content')
 
             <div class="content-header">
