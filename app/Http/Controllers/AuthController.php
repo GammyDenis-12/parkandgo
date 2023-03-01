@@ -9,7 +9,7 @@ class AuthController extends Controller
 {
     //
 
-    public function registration(){
+    public function adminlogin(){
         
         return view('auth.AdmLogin');
     }
@@ -20,7 +20,7 @@ class AuthController extends Controller
          $email = $request['email'];
          $password = $request['password']; 
         
-        if($email == "lino@gmail.com" && $password == "lino"){
+        if($email == "gammylino@gmail.com" && $password == "123456"){
 
             return redirect()->route('adm.dashboard');
            

@@ -30,86 +30,32 @@
 
     <!-- Template Stylesheet -->
     <link href="{{asset('parkngo/css/style.css')}}" rel="stylesheet">
-    
 </head>
 <body>
-    
-     <!-- Spinner Start -->
-     <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-        <div class="spinner-grow text-primary m-1" role="status">
-            <span class="sr-only">Loading...</span>
-        </div>
-        <div class="spinner-grow text-dark m-1" role="status">
-            <span class="sr-only">Loading...</span>
-        </div>
-        <div class="spinner-grow text-secondary m-1" role="status">
-            <span class="sr-only">Loading...</span>
-        </div>
-    </div>
-
-    @include('layout.userNav')
-         @yield('content')
-           <!-- Full Screen Search Start -->
-    <!-- <div class="modal fade" id="searchModal" tabindex="-1">
-        <div class="modal-dialog modal-fullscreen">
-            <div class="modal-content" style="background: rgba(9, 30, 62, .7);">
-                <div class="modal-header border-0">
-                    <button type="button" class="btn bg-white btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body d-flex align-items-center justify-content-center">
-                    <div class="input-group" style="max-width: 600px;">
-                        <input type="text" class="form-control bg-transparent border-primary p-3" placeholder="Type search keyword">
-                        <button class="btn btn-primary px-4"><i class="bi bi-search"></i></button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
-    <!-- Full Screen Search End -->
- 
-     
-    <!-- Full Screen Search Start -->
-    <!-- <div class="modal fade" id="searchModal" tabindex="-1">
-        <div class="modal-dialog modal-fullscreen">
-            <div class="modal-content" style="background: rgba(9, 30, 62, .7);">
-                <div class="modal-header border-0">
-                    <button type="button" class="btn bg-white btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body d-flex align-items-center justify-content-center">
-                    <div class="input-group" style="max-width: 600px;">
-                        <input type="text" class="form-control bg-transparent border-primary p-3" placeholder="Type search keyword">
-                        <button class="btn btn-primary px-4"><i class="bi bi-search"></i></button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
-    <!-- Full Screen Search End -->
-
 
     <!-- Carousel Start -->
-    <!-- <div class="container-fluid p-0">
+    <div class="container-fluid p-0">
         <div id="header-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img class="w-100" src="{{asset('parkngo/img/carousel-1.jpg')}}" alt="Image">
+                    <img class="w-100" src="{{asset('parkngo/img/parking1.jpg')}}" alt="Image">
                     <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                         <div class="p-3" style="max-width: 900px;">
-                            <h5 class="text-white text-uppercase mb-3 animated slideInDown">Keep Your Teeth Healthy</h5>
-                            <h1 class="display-1 text-white mb-md-4 animated zoomIn">Take The Best Quality Dental Treatment</h1>
-                            <a href="appointment.html" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Appointment</a>
-                            <a href="" class="btn btn-secondary py-md-3 px-md-5 animated slideInRight">Contact Us</a>
+                            <h5 class="text-white text-uppercase mb-3 animated slideInDown">Park Go</h5>
+                            <h1 class="display-1 text-white mb-md-4 animated zoomIn">Car Park Booking System</h1>
+                            <a href="{{route('user.login')}}" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Sign In As User</a>
+                            <a href="{{route('login.page')}}" class="btn btn-secondary py-md-3 px-md-5 animated slideInRight">Sign In As Admin</a>
                         </div>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img class="w-100" src="{{asset('parkngo/img/carousel-2.jpg')}}" alt="Image">
+                    <img class="w-100" src="{{asset('parkngo/img/parking2.jpg')}}" alt="Image">
                     <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                         <div class="p-3" style="max-width: 900px;">
-                            <h5 class="text-white text-uppercase mb-3 animated slideInDown">Keep Your Teeth Healthy</h5>
-                            <h1 class="display-1 text-white mb-md-4 animated zoomIn">Take The Best Quality Dental Treatment</h1>
-                            <a href="appointment.html" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Appointment</a>
-                            <a href="" class="btn btn-secondary py-md-3 px-md-5 animated slideInRight">Contact Us</a>
+                            <h5 class="text-white text-uppercase mb-3 animated slideInDown">Park Go</h5>
+                            <h1 class="display-1 text-white mb-md-4 animated zoomIn">Car Park Booking System</h1>
+                            <a href="{{route('user.login')}}" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Sign In As User</a>
+                            <a href="{{route('login.page')}} " class="btn btn-secondary py-md-3 px-md-5 animated slideInRight">Sign In As Admin</a>
                         </div>
                     </div>
                 </div>
@@ -125,8 +71,7 @@
                 <span class="visually-hidden">Next</span>
             </button>
         </div>
-    </div> -->
-    <!-- Carousel End -->
+    </div>
 
 
     <!-- JavaScript Libraries -->

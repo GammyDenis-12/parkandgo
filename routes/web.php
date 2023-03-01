@@ -5,7 +5,8 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\AdmController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\userAuthController;
-
+use App\Http\Controllers\ManageParkingController;
+use Illuminate\Support\Facades\View;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,15 +19,20 @@ use App\Http\Controllers\userAuthController;
 */
 
 
+Route::get('/', function (){
+    return view('FrontPage');
+});
+
 //userAuth
 Route::get('/user/registration',[userAuthController::class,'registration'])->name('user.registration');
 Route::post('/user/register',[userAuthController::class,'register'])->name('register.user');
 Route::get('/user/login',[userAuthController::Class,'login'])->name('user.login');
 Route::post('/user/store',[userAuthController::Class,'store'])->name('store.user');
+
+//userController
 Route::get('/park/now', [UserController::class,'index'])->name('user.home');
+Route::get('/user/dashboard', [UserController::class,'dashboard'])->name('user.dashboard');
 
-
-//user
 
 
 
@@ -34,6 +40,8 @@ Route::get('/park/now', [UserController::class,'index'])->name('user.home');
 Route::get('/Admin/Login',[AuthController::class,'adminlogin'])->name('login.page');
 Route::post('/Admin/Login/post',[AuthController::class,'login'])->name('admin.login');
 Route::get('/Admin/Dashboard', [AdmController::class,'admindashbd'])->name('adm.dashboard');
-
+Route::post('store/parkings/data',[AdmController::class,'store'])->name('spaces.store');
+//manageparking
+Route::get('/add/parkings',[ManageParkingController::class,'index'])->name('add.parking');
 
 

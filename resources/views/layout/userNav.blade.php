@@ -7,21 +7,16 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarCollapse">
         <div class="navbar-nav ms-auto py-0">
-            <a href="index.html" class="nav-item nav-link active">Home</a>
-            <a href="about.html" class="nav-item nav-link">About</a>
-            <a href="service.html" class="nav-item nav-link">Service</a>
+            <a href="#" class="nav-item nav-link active">Lgu Baguio Site</a>
+            <a href="#" class="nav-item nav-link">Contact</a>
+            <a href="{{route('user.dashboard')}}" class="nav-item nav-link">Dashboard</a>
             <div class="nav-item dropdown">
-                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"> <i class="fa fa-user" aria-hidden="true"></i>Star</a>
                 <div class="dropdown-menu m-0">
-                    <a href="price.html" class="dropdown-item">Pricing Plan</a>
-                    <a href="team.html" class="dropdown-item">Our Dentist</a>
-                    <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                    <a href="appointment.html" class="dropdown-item">Appointment</a>
+                    <a href="#" class="dropdown-item"> Log Out</a>
                 </div>
             </div>
-            <a href="contact.html" class="nav-item nav-link">Contact</a>
         </div>
-        <button type="button" class="btn text-dark" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fa fa-search"></i></button>
-        <a href="appointment.html" class="btn btn-primary py-2 px-4 ms-3">Book Now</a>
-    </div>
+        <!-- <a href="appointment.html" class="btn btn-primary py-2 px-4 ms-3">Book Now</a>
+    </div> -->
 </nav>

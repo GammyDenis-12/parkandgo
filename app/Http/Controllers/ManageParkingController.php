@@ -5,23 +5,21 @@ namespace App\Http\Controllers;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
-use App\Models\ParkSpaces;
+use Illuminate\Support\Facades\DB;
+use Illuminate\View\View;
 
-class UserController extends Controller
+class ManageParkingController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index() 
     {
-             return view('layout.userLayout');
+        $data = DB::table('park_spaces')
+        ->paginate(10);
+         return view('content.addparking',compact('data'));
+
     }
-
-    public function dashboard(){
-
-        return view('usercontent.dashboard');
-    }
-
 
     /**
      * Show the form for creating a new resource.
@@ -34,10 +32,9 @@ class UserController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(Request $request): RedirectResponse
     {
-
-       
+        //
     }
 
     /**

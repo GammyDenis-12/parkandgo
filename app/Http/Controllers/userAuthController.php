@@ -36,11 +36,10 @@ class userAuthController extends Controller
       public function store ( Request $request){
          
          if(Auth::attempt($request->only('email','password'))){
-            return redirect()->route('user.home');
+            return redirect()->route('user.dashboard');
          }else{ 
          
             return redirect()->route('user.login')->with('fail','invalid credentials');
-         
 
          }
 
