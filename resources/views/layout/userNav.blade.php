@@ -11,9 +11,9 @@
             <a href="#" class="nav-item nav-link">Contact</a>
             <a href="{{route('user.dashboard')}}" class="nav-item nav-link">Dashboard</a>
             <div class="nav-item dropdown">
-                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"> <i class="fa fa-user" aria-hidden="true"></i>Star</a>
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"> <i class="fa fa-user" aria-hidden="true"></i>{{auth()->user()->name}}</a>
                 <div class="dropdown-menu m-0">
-                    <a href="#" class="dropdown-item"> Log Out</a>
+                    <a href="{{route('user.logout')}}" class="dropdown-item"> Log Out</a>
                 </div>
             </div>
         </div>

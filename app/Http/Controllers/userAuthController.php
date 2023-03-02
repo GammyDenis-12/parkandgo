@@ -42,9 +42,13 @@ class userAuthController extends Controller
             return redirect()->route('user.login')->with('fail','invalid credentials');
 
          }
+             
+      }
 
-        
-               
+      public function logout(){
+              
+         Auth::logout();
+         return redirect()->route('user.login');
 
       }
 }

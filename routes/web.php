@@ -28,6 +28,7 @@ Route::get('/user/registration',[userAuthController::class,'registration'])->nam
 Route::post('/user/register',[userAuthController::class,'register'])->name('register.user');
 Route::get('/user/login',[userAuthController::Class,'login'])->name('user.login');
 Route::post('/user/store',[userAuthController::Class,'store'])->name('store.user');
+Route::get('/logout', [userAuthController::class,'logout'])->name('user.logout');
 
 //userController
 Route::get('/park/now', [UserController::class,'index'])->name('user.home');
