@@ -5,7 +5,7 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1>Manage Parking</h1>
+                    <h1>Manage Parkings</h1>
                 </div>
             </div>
         </div>
@@ -116,9 +116,9 @@
                                 <td>{{$item->id}}</td>
                                 <td>{{$item->name}}</td>
                                 <td>0</td>
-                                <td>{{$item->status}}</td>
                                 <td>{{$item->spaces}}</td>
-                                <td>{{$item->price}}</td>
+                                <td>{{$item->price}} Pezoz</td>
+                                <td>{{$item->status}}</td>
                                 <td class="btn-group">
 
                                     {{-- <a href="{{ url('edit-issues/' . $item->id) }}" class="btn btn-primary">Edit</a> --}}
@@ -127,7 +127,7 @@
                                     edit
                                 </button>
 
-                                    <a  href="" class="btn btn-info">Show</a>
+                                    <a  href="#" class="btn btn-info">Show</a>
                                   
                                     <button type="button" class="btn btn-danger" data-toggle="modal"
                                         data-target="#ModalDelete">

@@ -2,11 +2,13 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\manageUserController;
 use App\Http\Controllers\AdmController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\userAuthController;
 use App\Http\Controllers\ManageParkingController;
 use Illuminate\Support\Facades\View;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -42,7 +44,12 @@ Route::get('/Admin/Login',[AuthController::class,'adminlogin'])->name('login.pag
 Route::post('/Admin/Login/post',[AuthController::class,'login'])->name('admin.login');
 Route::get('/Admin/Dashboard', [AdmController::class,'admindashbd'])->name('adm.dashboard');
 Route::post('store/parkings/data',[AdmController::class,'store'])->name('spaces.store');
+
+
 //manageparking
 Route::get('/add/parkings',[ManageParkingController::class,'index'])->name('add.parking');
 
 
+//manageUser
+
+Route::get('/Manage/User',[manageUserController::class,'index'])->name('manage.user');

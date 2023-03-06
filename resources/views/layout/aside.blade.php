@@ -53,7 +53,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                          <a href="{{ route('adm.dashboard') }}" class="nav-link">
+                          <a href="{{ route('manage.user') }}" class="nav-link">
                               <i class="nav-icon fas fa-user-alt"></i>
                               <p>Manage User</p>
                           </a>
