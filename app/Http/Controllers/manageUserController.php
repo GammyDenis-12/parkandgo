@@ -12,9 +12,11 @@ class manageUserController extends Controller
      */
     public function index()
     {
-        $data = User::orderBy('id','desc')
-        ->paginate(10);
-          return view('content.manageuser',compact('data'));
+
+        $data = User::orderBy('id','desc')->paginate(10);
+
+        return view('content.manageuser',compact('data'));
+
     }
 
     /**
@@ -22,7 +24,7 @@ class manageUserController extends Controller
      */
     public function create()
     {
-        //
+               
     }
 
     /**
@@ -62,6 +64,12 @@ class manageUserController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        
+        $userId = $id;
+
+        User::where('id', $userId )->delete();
+
+        return redirect()->route('manage.user')->with('c');
+
     }
 }

@@ -18,7 +18,55 @@
     <!-- Contact Start -->
     <div class="container-fluid py-5">
         <div class="container">
-            <div class="row g-5">
+            <div class="col-lg-12">
+                <div class="appointment-form h-100 d-flex flex-column justify-content-center text-center p-5 wow zoomIn" data-wow-delay="0.6s" style="visibility: visible; animation-delay: 0.6s; animation-name: zoomIn;">
+                    <h1 class="text-white mb-4">Start Parking</h1>
+                    <form>
+                        <div class="row g-3">
+                            <h4 class="text-white">Entry Date and Time</h4>
+                            <div class="col-12 col-sm-6">
+                               
+                                <div class="date" id="date1" data-target-input="nearest">
+                                    <input type="text" class="form-control bg-light border-0 datetimepicker-input" placeholder="Entry Date" data-target="#date1" data-toggle="datetimepicker" style="height: 55px;">
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <div class="time" id="time1" data-target-input="nearest">
+                                    <input type="text" class="form-control bg-light border-0 datetimepicker-input" placeholder="Entry Time" data-target="#time1" data-toggle="datetimepicker" style="height: 55px;">
+                                </div>
+                            </div>
+                            
+                            <div class="col-12 col-sm-6" >
+                                <select class="form-select bg-light border-0 w-100" style="height: 55px; " >
+                                    <option selected="" name>Select Car Park</option>
+                                    @foreach ($data as $item)
+                                    <option value="1">{{$item->name}}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                            {{-- <div class="col-12 col-sm-6">
+                                <select class="form-select bg-light border-0" style="height: 55px;">
+                                    <option selected="">Select </option>
+                                    <option value="1">Doctor 1</option>
+                                    <option value="2">Doctor 2</option>
+                                    <option value="3">Doctor 3</option>
+                                </select>
+                            </div> --}}
+                            {{-- <div class="col-12 col-sm-6">
+                                <input type="text" class="form-control bg-light border-0" placeholder="Your Name" style="height: 55px;">
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <input type="email" class="form-control bg-light border-0" placeholder="Your Email" style="height: 55px;">
+                            </div> --}}
+                            <div class="col-12">
+                                <button class="btn btn-dark w-100 py-3" type="submit">Next</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+    
+            {{-- <div class="row g-5">
                 <div class="col-xl-4 col-lg-6 wow slideInUp" data-wow-delay="0.1s">
                     <div class="bg-light rounded h-100 p-5">
                         <div class="section-title">
@@ -47,8 +95,8 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-xl-4 col-lg-6 wow slideInUp" data-wow-delay="0.3s">
+                </div> --}}
+                {{-- <div class="col-xl-4 col-lg-6 wow slideInUp" data-wow-delay="0.3s">
                     <form>
                         <div class="row g-3">
                             <div class="col-12">
@@ -68,13 +116,19 @@
                             </div>
                         </div>
                     </form>
-                </div>
-                <div class="col-xl-4 col-lg-12 wow slideInUp" data-wow-delay="0.6s">
-                    <iframe class="position-relative rounded w-100 h-100"
-                        src="  https://www.google.com/maps/embed/v1/MAP_MODE?key=AIzaSyBYwAHztpq0a9YevRvxi2PkvplGN__5cuw&parameters"
-                        frameborder="0" style="min-height: 400px; border:0;" allowfullscreen="" aria-hidden="false"
-                        tabindex="0"></iframe>
-                </div>
+                </div> --}}
+                {{-- <div class="col-lg-6 wow slideInUp" data-wow-delay="0.6s">
+                    <iframe
+  width="600"
+  height="450"
+  style="border:0"
+  loading="lazy"
+  allowfullscreen
+  referrerpolicy="no-referrer-when-downgrade"
+  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBfdEiWyQJHpG93d_UOobgalVyFMnMSrMM
+    &q=Space+Needle,Seattle+WA">
+</iframe>
+                </div> --}}
             </div>
         </div>
     </div>

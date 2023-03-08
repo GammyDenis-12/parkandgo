@@ -51,5 +51,5 @@ Route::get('/add/parkings',[ManageParkingController::class,'index'])->name('add.
 
 
 //manageUser
-
 Route::get('/Manage/User',[manageUserController::class,'index'])->name('manage.user');
+Route::get('/Delete/user/{id}',[manageUserController::class,'destroy'])->name('delete.user');

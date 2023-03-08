@@ -13,13 +13,13 @@ class UserController extends Controller
      * Display a listing of the resource.
      */
     public function index()
-    {
+    {      
              return view('layout.userLayout');
     }
 
     public function dashboard(){
-
-        return view('usercontent.dashboard');
+        $data = ParkSpaces::all();
+        return view('usercontent.dashboard',compact('data'));
     }
 
 
