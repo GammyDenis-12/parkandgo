@@ -33,7 +33,7 @@
     
 </head>
 <body>
-    
+    @auth
      <!-- Spinner Start -->
      <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
         <div class="spinner-grow text-primary m-1" role="status">
@@ -49,6 +49,8 @@
 
     @include('layout.userNav')
          @yield('content')
+
+        @endauth
            <!-- Full Screen Search Start -->
     <!-- <div class="modal fade" id="searchModal" tabindex="-1">
         <div class="modal-dialog modal-fullscreen">

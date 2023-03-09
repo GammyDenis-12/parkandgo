@@ -22,7 +22,7 @@ use Illuminate\Support\Facades\View;
 
 
 Route::get('/', function (){
-    return view('FrontPage');
+    return view('FrontPage')->middleware('auth');
 });
 
 //userAuth
@@ -33,8 +33,8 @@ Route::post('/user/store',[userAuthController::Class,'store'])->name('store.user
 Route::get('/logout', [userAuthController::class,'logout'])->name('user.logout');
 
 //userController
-Route::get('/park/now', [UserController::class,'index'])->name('user.home');
-Route::get('/user/dashboard', [UserController::class,'dashboard'])->name('user.dashboard');
+Route::get('/park/now', [UserController::class,'index'])->name('user.home')->middleware('auth');
+Route::get('/user/dashboard', [UserController::class,'dashboard'])->name('user.dashboard')->middleware('auth');
 
 
 
