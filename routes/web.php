@@ -22,7 +22,7 @@ use Illuminate\Support\Facades\View;
 
 
 Route::get('/', function (){
-    return view('FrontPage')->middleware('auth');
+    return view('FrontPage');
 });
 
 //userAuth
@@ -35,16 +35,13 @@ Route::get('/logout', [userAuthController::class,'logout'])->name('user.logout')
 //userController
 Route::get('/park/now', [UserController::class,'index'])->name('user.home')->middleware('auth');
 Route::get('/user/dashboard', [UserController::class,'dashboard'])->name('user.dashboard')->middleware('auth');
-
-
-
+Route::get('/available/parking/space',[UserController::class,'create'])->name('available.parkings');
 
 //admin
 Route::get('/Admin/Login',[AuthController::class,'adminlogin'])->name('login.page');
 Route::post('/Admin/Login/post',[AuthController::class,'login'])->name('admin.login');
 Route::get('/Admin/Dashboard', [AdmController::class,'admindashbd'])->name('adm.dashboard');
 Route::post('store/parkings/data',[AdmController::class,'store'])->name('spaces.store');
-
 
 //manageparking
 Route::get('/add/parkings',[ManageParkingController::class,'index'])->name('add.parking');

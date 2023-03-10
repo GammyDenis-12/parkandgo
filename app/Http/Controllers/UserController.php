@@ -6,6 +6,7 @@ use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use App\Models\ParkSpaces;
+use Illuminate\Support\Facades\DB;
 
 class UserController extends Controller
 {
@@ -26,9 +27,17 @@ class UserController extends Controller
     /**
      * Show the form for creating a new resource.
      */
-    public function create(): Response
+    public function create()
     {
-        //
+        $user = DB::table('park_spaces')->where('name', 'Burnhampark')->first();
+
+        $spaces = $user->spaces;
+         
+         for ($i = 1; $i <= $spaces; $i++ ){
+
+            echo "The number is: $i <br>";
+
+         }
     }
 
     /**
