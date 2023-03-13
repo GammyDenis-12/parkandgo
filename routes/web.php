@@ -7,6 +7,7 @@ use App\Http\Controllers\AdmController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\userAuthController;
 use App\Http\Controllers\ManageParkingController;
+use App\Http\Controllers\BookingHistoryController;
 use Illuminate\Support\Facades\View;
 
 /*
@@ -50,3 +51,6 @@ Route::get('/add/parkings',[ManageParkingController::class,'index'])->name('add.
 //manageUser
 Route::get('/Manage/User',[manageUserController::class,'index'])->name('manage.user');
 Route::get('/Delete/user/{id}',[manageUserController::class,'destroy'])->name('delete.user');
+
+//Booking History
+Route::match(['get', 'post'], 'Booking/History/',[BookingHistoryController::class,'index'])->name('booking.history');

@@ -58,6 +58,12 @@
                               <p>Manage User</p>
                           </a>
                       </li>
+                      <li class="nav-item">
+                        <a href="{{route('booking.history')}}" class="nav-link">
+                            <i class="nav-icon fas fa-user-alt"></i>
+                            <p>Bookings</p>
+                        </a>
+                    </li>
 
                         <li class="nav-item menu-is-opening menu-open">
                             <a href="#" class="nav-link">

@@ -32,12 +32,13 @@ class UserController extends Controller
         $user = DB::table('park_spaces')->where('name', 'Burnhampark')->first();
 
         $spaces = $user->spaces;
-         
+        $values = array();
          for ($i = 1; $i <= $spaces; $i++ ){
+            $values[] = $i;
 
-            echo "The number is: $i <br>";
+         }       
 
-         }
+              return view('usercontent.availableSpace',compact('values'));
     }
 
     /**
