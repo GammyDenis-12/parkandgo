@@ -21,26 +21,30 @@
             <div class="col-lg-12">
                 <div class="appointment-form h-100 d-flex flex-column justify-content-center text-center p-5 wow zoomIn" data-wow-delay="0.6s" style="visibility: visible; animation-delay: 0.6s; animation-name: zoomIn;">
                     <h1 class="text-white mb-4">Start Parking</h1>
-                    <form>
+                    <form action="{{route('store.parkings')}}" method="post">
+                        @csrf
                         <div class="row g-3">
                             <h4 class="text-white">Entry Date and Time</h4>
                             <div class="col-12 col-sm-6">
                                
                                 <div class="date" id="date1" data-target-input="nearest">
-                                    <input type="text" class="form-control bg-light border-0 datetimepicker-input" placeholder="Entry Date" data-target="#date1" data-toggle="datetimepicker" style="height: 55px;">
+                                    <input type="text" class="form-control bg-light border-0 datetimepicker-input" 
+                                    placeholder="Entry Date" data-target="#date1" data-toggle="datetimepicker" style="height: 55px;" name="entryDate">
                                 </div>
                             </div>
                             <div class="col-12 col-sm-6">
                                 <div class="time" id="time1" data-target-input="nearest">
-                                    <input type="text" class="form-control bg-light border-0 datetimepicker-input" placeholder="Entry Time" data-target="#time1" data-toggle="datetimepicker" style="height: 55px;">
+                                    <input type="text" class="form-control bg-light border-0 datetimepicker-input" 
+                                    placeholder="Entry Time" data-target="#time1" data-toggle="datetimepicker" style="height: 55px;" name="entryTime">
                                 </div>
                             </div>
                             
                             <div class="col-12 col-sm-6" >
-                                <select class="form-select bg-light border-0 w-100" style="height: 55px; " >
-                                    <option selected="" name>Select Car Park</option>
+                                <select class="form-select bg-light border-0 w-100" style="height: 55px; " name="name" >
+                                    <option selected="" >Select Car Park</option>
                                     @foreach ($data as $item)
-                                    <option value="1">{{$item->name}}</option>
+                                    <option value={{$item->name}}>{{$item->name}}
+                                    </option>
                                     @endforeach
                                 </select>
                             </div>
@@ -59,7 +63,9 @@
                                 <input type="email" class="form-control bg-light border-0" placeholder="Your Email" style="height: 55px;">
                             </div> --}}
                             <div class="col-12">
-                                <button class="btn btn-dark w-100 py-3" type="submit">Next</button>
+                                {{-- <button class="btn btn-dark w-100 py-3" type="submit">Next</button> --}}
+                                <a href="{{route('available.parkings')}}" class="btn btn-dark w-100 py-3">next</a>
+                            
                             </div>
                         </div>
                     </form>

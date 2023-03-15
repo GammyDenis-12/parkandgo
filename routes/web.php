@@ -37,6 +37,7 @@ Route::get('/logout', [userAuthController::class,'logout'])->name('user.logout')
 Route::get('/park/now', [UserController::class,'index'])->name('user.home')->middleware('auth');
 Route::get('/user/dashboard', [UserController::class,'dashboard'])->name('user.dashboard')->middleware('auth');
 Route::get('/available/parking/space',[UserController::class,'create'])->name('available.parkings');
+Route::post('/store/parkings',[UserController::class,'store'])->name('store.parkings');
 
 //admin
 Route::get('/Admin/Login',[AuthController::class,'adminlogin'])->name('login.page');

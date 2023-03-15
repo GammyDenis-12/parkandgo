@@ -37,7 +37,6 @@ class UserController extends Controller
             $values[] = $i;
 
          }       
-
               return view('usercontent.availableSpace',compact('values'));
     }
 
@@ -46,7 +45,7 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-
+         dd($request);
        
     }
 
