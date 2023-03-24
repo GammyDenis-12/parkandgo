@@ -47,6 +47,8 @@ Route::post('store/parkings/data',[AdmController::class,'store'])->name('spaces.
 
 //manageparking
 Route::get('/add/parkings',[ManageParkingController::class,'index'])->name('add.parking');
+Route::get('/delete/parkings/{id}',[ManageParkingController::class,'destroy'])->name('delete.parking');
+Route::get('/edit/parkings/{id}',[ManageParkingController::class,'edit'])->name('edit.parking');
 
 
 //manageUser

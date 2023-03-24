@@ -48,9 +48,9 @@ class ManageParkingController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id): Response
+    public function edit(string $id)
     {
-        //
+        return ($id);
     }
 
     /**
@@ -64,8 +64,8 @@ class ManageParkingController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id): RedirectResponse
+    public function destroy(string $id)
     {
-        //
+                 return ($id);
     }
 }

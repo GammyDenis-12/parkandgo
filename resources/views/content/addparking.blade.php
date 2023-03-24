@@ -24,7 +24,7 @@
                     <div class="alert alert-success alert-dismissible fade show" role="alert">
                     <strong>{{ $message }}</strong>
                     </div>
-          @endif 
+            @endif 
             
     {{-- modal content --}}
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -105,7 +105,7 @@
                                 <th>Name</th>
                                 <th>Occupied now</th>
                                 <th>Available now</th>
-                                <th>Price today</th>
+                                <th>Price Per Hour</th>
                                 <th>Status</th>
                                 <th style="width: 40px">Action</th>
                             </tr>
@@ -121,18 +121,19 @@
                                 <td>{{$item->status}}</td>
                                 <td class="btn-group">
 
-                                    {{-- <a href="{{ url('edit-issues/' . $item->id) }}" class="btn btn-primary">Edit</a> --}}
-                                    <button type="button" class="btn btn-primary" data-toggle="modal"
+                                    <a href="{{route('edit.parking', $item->id)}}" class="btn btn-primary">Edit</a>
+                                    {{-- <button type="button" class="btn btn-primary" data-toggle="modal"
                                     data-target="#ModalEdit">
                                     edit
-                                </button>
+                                </button> --}}
 
                                     <a  href="#" class="btn btn-info">Show</a>
                                   
-                                    <button type="button" class="btn btn-danger" data-toggle="modal"
+                                    <a  href="{{route('delete.parking', $item->id) }}" class="btn btn-danger">Delete</a>
+                                    {{-- <button type="button" class="btn btn-danger" data-toggle="modal"
                                         data-target="#ModalDelete">
                                         Delete
-                                    </button>
+                                    </button> --}}
                                 </td>
                             </tr>
                             @endforeach
